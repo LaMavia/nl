@@ -1,0 +1,104 @@
+{
+  "Let": {
+    "identifier": "fact",
+    "value": {
+      "Lambda": {
+        "arg": {
+          "Identifier": {
+            "name": "n"
+          }
+        },
+        "body": {
+          "Expression": {
+            "operator": {
+              "Expression": {
+                "operator": {
+                  "Operator": "Eq"
+                },
+                "arguments": [
+                  {
+                    "Identifier": {
+                      "name": "n"
+                    }
+                  },
+                  {
+                    "Literal": {
+                      "Integer": 0
+                    }
+                  }
+                ]
+              }
+            },
+            "arguments": [
+              {
+                "Literal": {
+                  "Integer": 1
+                }
+              },
+              {
+                "Expression": {
+                  "operator": {
+                    "Operator": "Mul"
+                  },
+                  "arguments": [
+                    {
+                      "Identifier": {
+                        "name": "n"
+                      }
+                    },
+                    {
+                      "Expression": {
+                        "operator": {
+                          "Identifier": {
+                            "name": "fact"
+                          }
+                        },
+                        "arguments": [
+                          {
+                            "Expression": {
+                              "operator": {
+                                "Operator": "Sub"
+                              },
+                              "arguments": [
+                                {
+                                  "Identifier": {
+                                    "name": "n"
+                                  }
+                                },
+                                {
+                                  "Literal": {
+                                    "Integer": 1
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "scope": {
+      "Expression": {
+        "operator": {
+          "Identifier": {
+            "name": "fact"
+          }
+        },
+        "arguments": [
+          {
+            "Literal": {
+              "Integer": 4
+            }
+          }
+        ]
+      }
+    }
+  }
+}
